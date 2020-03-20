@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@buckeye/bs-tarn@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@buckeye/bs-tarn/-/bs-tarn-1.0.0.tgz#69fba5cc91077be73cb065b6388968f5e5816636"
+  integrity sha1-afulzJEHe+c8sGW2OIlo9eWBZjY=
+  dependencies:
+    tarn "^1.1.4"
+
+"@glennsl/bs-json@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@glennsl/bs-json/-/bs-json-2.0.0.tgz#e621aac1e94d49bc12bf493b67c01c39e61a6415"
+  integrity sha512-Dx3+enF0Pjj4c0axSL3BA80jfPKnXP4utfesh7sQFxgHIXKRTVShzz3mTuRtJ00cBxGXMTlMK1z4OAvmtk7lJg==
+
 agent-base@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.3.0.tgz#8165f01c436009bccad0b1d122f05ed770efc6ee"
@@ -27,6 +39,13 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+bs-node-debug@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/bs-node-debug/-/bs-node-debug-0.2.0.tgz#50d2d48819af4d40e0585cc35b56dfdeeda4985a"
+  integrity sha512-ZgNwGsFywaCo+dabK4XXAlPnW+qWSgN2M5KQEwhCHRDjsOZrNoDTwb0XoMxj99VggeCnA9rJddSk6tEpMkOrrQ==
+  dependencies:
+    debug "^3.1.0"
+
 bs-platform@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-7.1.1.tgz#ed4032de7ab15158c61d8994680a05393e3ddd74"
@@ -38,6 +57,16 @@ bs-puppeteer@^0.12.0:
   integrity sha512-N/9/tSjjndDnJJMDBlyFZiGzez/BBrc+h8vwc4QlghtGM19QBFo6EW3XPE6I1QZifgZZmUU/WQBRnpFsm9dXZA==
   dependencies:
     puppeteer "^1.9.0"
+
+bs-sql-common@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/bs-sql-common/-/bs-sql-common-6.0.0.tgz#c8354fa44bd0f458be5079e24711c6e985bc65a0"
+  integrity sha512-JxAVSUVmieRvtuTOCrTkDIilbpAXopF8l8O5SOPwIJRgRUxcbHqPQOrfXIeAl3X41FkBfFqiADFWl+kRs/Ew8w==
+  dependencies:
+    "@buckeye/bs-tarn" "^1.0.0"
+    "@glennsl/bs-json" "^2.0.0"
+    bs-node-debug "^0.2.0"
+    sqlstring "^2.3.1"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -262,12 +291,22 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
 
+sqlstring@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/sqlstring/-/sqlstring-2.3.1.tgz#475393ff9e91479aea62dcaf0ca3d14983a7fb40"
+  integrity sha1-R1OT/56RR5rqYtyvDKPRSYOn+0A=
+
 string_decoder@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.1.1.tgz#9cf1611ba62685d7030ae9e4ba34149c3af03fc8"
   integrity sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
   dependencies:
     safe-buffer "~5.1.0"
+
+tarn@^1.1.4:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/tarn/-/tarn-1.1.5.tgz#7be88622e951738b9fa3fb77477309242cdddc2d"
+  integrity sha512-PMtJ3HCLAZeedWjJPgGnCvcphbCOMbtZpjKgLq3qM5Qq9aQud+XHrL0WlrlgnTyS8U+jrjGbEXprFcQrxPy52g==
 
 typedarray@^0.0.6:
   version "0.0.6"

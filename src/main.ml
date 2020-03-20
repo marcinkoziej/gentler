@@ -34,3 +34,5 @@ let openWindow () =
 
 let () =
   ignore (openWindow ())
+
+let aa  = 11 + " asd"
