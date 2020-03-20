@@ -68,6 +68,11 @@ bs-sql-common@^6.0.0:
     bs-node-debug "^0.2.0"
     sqlstring "^2.3.1"
 
+bs-webapi@^0.15.9:
+  version "0.15.9"
+  resolved "https://registry.yarnpkg.com/bs-webapi/-/bs-webapi-0.15.9.tgz#d1dcfbd40499a3b0914daacc4ceef47a0f3c906f"
+  integrity sha512-bmzO6na2HmK01a34qB7afMwfVSrPxkP3EGzUslWObuxbHIlLC0PAMDu4lA8ZL5NasBUctlwnA1QZxox+1aNWWw==
+
 buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"

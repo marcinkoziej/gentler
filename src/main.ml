@@ -1,7 +1,6 @@
 open BsPuppeteer
 open Js.Promise
 
-
 type typeOptions = { delay: float }  [@@bs.deriving jsConverter]
 
 let makeTypeOptions d = typeOptionsToJs { delay=d }
@@ -13,6 +12,7 @@ let clickButtonWithText page text =
   |> then_(function button -> ElementHandle.click button ())
 
 let login page =
+  Js.Console.log "hi?";
   let options = Navigation.makeOptions ~timeout:5000.0 ~waitUntil:`domcontentloaded () in
   Page.goto page "https://instagram.com" ~options ()
   |> then_(fun _ -> Page.waitForSelector page "input[name=username]" ())
@@ -20,6 +20,7 @@ let login page =
   |> then_(fun _ -> Page.type_ page "input[name=password]" Config.password ~options:(makeTypeOptions 100.) ())
   |> then_(fun _ -> Page.click page "[type=submit]" ())
   |> then_(fun _ -> clickButtonWithText page "Not Now")
+  |> then_(fun _ -> Lurk.findLikers page)
 
 
 let openWindow () =
@@ -35,4 +36,3 @@ let openWindow () =
 let () =
   ignore (openWindow ())
 
-let aa  = 11 + " asd"

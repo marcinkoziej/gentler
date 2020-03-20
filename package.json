@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "bs-puppeteer": "^0.12.0",
-    "bs-sql-common": "^6.0.0"
+    "bs-sql-common": "^6.0.0",
+    "bs-webapi": "^0.15.9"
   }
 }
