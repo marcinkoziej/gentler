@@ -30,12 +30,16 @@ Classes for elements of interest
 let getNicknames page = 
   let contSel = "[role=\"dialog\"] >div.Igw0E" in
   let nickSel = contSel ^ ">div >div >div >div.vwCYk" in
-  Page.waitForSelector page nickSel ()
+  Page.waitForSelector page contSel ()
   |> then_(fun _ ->
       Page.selectAllEval page nickSel (fun node_list ->
-          [%raw {|
-            [...node_list].map(n => n.innerHTML)
-          |}]
+          NodeList.toArray node_list
+          |> Js.Array.map (fun n ->
+              match Element.ofNode n with 
+              | Some el ->
+                Element.innerHTML el
+              | None -> ""
+            )
         )
     )
   |> then_(fun nick_arr ->
