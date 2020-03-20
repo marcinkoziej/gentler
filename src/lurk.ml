@@ -28,13 +28,13 @@ Classes for elements of interest
 *)
 
 let getNicknames page = 
-  let contSel = "[role=\"dialog\"] >div.Igw0E" in
-  let nickSel = contSel ^ ">div >div >div >div.vwCYk" in
-  Page.waitForSelector page nickSel ()
+  let contSel = "[role=dialog]" in
+  let nickSel = contSel ^ " a[title]" in
+  Page.waitForSelector page contSel ~options:(Page.makeSelectorOptions ~visible:true ()) ()
   |> then_(fun _ ->
       Page.selectAllEval page nickSel (fun node_list ->
           [%raw {|
-            [...node_list].map(n => n.innerHTML)
+            [...node_list].map(n => { console.log(n.parentNode); return n.href })
           |}]
         )
     )

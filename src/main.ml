@@ -16,8 +16,8 @@ let login page =
   let options = Navigation.makeOptions ~timeout:5000.0 ~waitUntil:`domcontentloaded () in
   Page.goto page "https://instagram.com" ~options ()
   |> then_(fun _ -> Page.waitForSelector page "input[name=username]" ())
-  |> then_(fun _ -> Page.type_ page "input[name=username]" Config.username ~options:(makeTypeOptions 100.) ())
-  |> then_(fun _ -> Page.type_ page "input[name=password]" Config.password ~options:(makeTypeOptions 100.) ())
+  |> then_(fun _ -> Page.type_ page "input[name=username]" Config.username ~options:(makeTypeOptions 50.) ())
+  |> then_(fun _ -> Page.type_ page "input[name=password]" Config.password ~options:(makeTypeOptions 50.) ())
   |> then_(fun _ -> Page.click page "[type=submit]" ())
   |> then_(fun _ -> clickButtonWithText page "Not Now")
   |> then_(fun _ -> Lurk.findLikers page)
