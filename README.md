@@ -23,6 +23,11 @@ npm run build
 npm run watch
 ```
 
+# Run
+```
+node src/main.bs.js
+```
+
 
 # Editor
 If you use `vscode`, Press `Windows + Shift + B` it will build automatically
