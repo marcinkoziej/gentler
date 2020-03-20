@@ -1,4 +1,4 @@
-# Gentle - a gentle instagram bot
+# Gentler - a gentle instagram bot
 
 # Requirements
 
